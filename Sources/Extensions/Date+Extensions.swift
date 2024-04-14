@@ -1,6 +1,6 @@
 import Foundation
 
-extension Date {
+public extension Date {
     
     static func create(day: Int, month: Int, year: Int) -> Date {
         let calendar = Calendar.current

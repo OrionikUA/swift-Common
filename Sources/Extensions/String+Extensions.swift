@@ -1,6 +1,6 @@
 import Foundation
 
-extension String {
+public extension String {
     var separatedWordsWithoutParentheses: String {
         let firstNil = self.split(separator: "(").first
         guard let first = firstNil else {

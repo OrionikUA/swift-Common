@@ -1,4 +1,4 @@
-extension Array where Element == String {
+public extension Array where Element == String {
     func removeDuplicates() -> [String] {
         var seen = Set<String>()
         return self.filter { seen.insert($0).inserted }
