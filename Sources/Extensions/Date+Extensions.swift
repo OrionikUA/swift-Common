@@ -96,6 +96,14 @@ public extension Date {
         return Calendar.current.date(byAdding: .day, value: i, to: self)!
     }
     
+    func previousHour(_ i: Int = 1) -> Date {
+        return Calendar.current.date(byAdding: .hour, value: -i, to: self)!
+    }
+    
+    func nextHour(_ i: Int = 1) -> Date {
+        return Calendar.current.date(byAdding: .hour, value: i, to: self)!
+    }
+    
     static var today: Date {
         Calendar.current.startOfDay(for: Date())
     }
@@ -111,6 +119,10 @@ public extension Date {
         comps.weekday = 2
         let mondayInWeek = cal.date(from: comps)!
         return mondayInWeek
+    }
+    
+    var startOfDay: Date {
+        Calendar.current.startOfDay(for: self)
     }
     
     var startOfMonth: Date {
